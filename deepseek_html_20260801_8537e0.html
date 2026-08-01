@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official independent memorial and investigation into the shutdown of the Struckd platform by Unity Technologies. History, facts, corporate negligence, Lost Media, and the ReStruckd announcement.">
+    <meta name="keywords" content="Struckd, Unity, Unity Technologies, Struckd 3D Game Creator, Struckd Dead, Flurin Jenal, Silvan Bauser, Struckd & YR Christmas, Struckd Audi, Lost Media, ReStruckd">
+    <meta name="author" content="Struckd Community / Struckd Dead Memorial">
+    
+    <!-- OpenGraph SEO -->
+    <meta property="og:title" content="Struckd Dead — How Unity destroyed the dream of millions of creators">
+    <meta property="og:description" content="Full investigation and timeline of Unity Technologies' negligent decision to liquidate the Struckd platform.">
+    <meta property="og:type" content="website">
+    <title>Struckd Dead — Memorial to Flurin's creation</title>
+    <!-- Main modern high-quality format -->
+<link rel="icon" type="image/png" sizes="32x32" href="/struckddead.png">
+
+<!-- Fallback format for older browsers (will need to create .ico file) -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <!-- OpenGraph SEO (Telegram, WhatsApp, Viber, Facebook, VK) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Struckd Dead — Memorial to Flurin's creation">
+    <meta property="og:description" content="Full investigation and timeline of Unity Technologies' negligent decision to liquidate the Struckd platform.">
+    <meta property="og:image" content="https://i.ibb.co/VpzjZYxW/IMG-20260801-053557.png">
+    <!-- Specify image dimensions so messengers recognize it as a large banner -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter / X Cards (Ensures large banner format) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Struckd Dead — Memorial to Flurin's creation">
+    <meta name="twitter:description" content="Full investigation and timeline of the Struckd shutdown.">
+    <meta name="twitter:image" content="https://i.ibb.co/VpzjZYxW/IMG-20260801-053557.png">
+    
+  
+    
+    <!-- Material Font (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS RESET & MATERIAL DESIGN VARIABLES */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-color: #0d0f14;
+            --card-bg: #161a23;
+            --card-border: #262c3d;
+            --accent-struckd: #10b981; /* Material Emerald */
+            --accent-red: #ef4444;
+            --accent-gold: #f59e0b;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --heading-color: #ffffff;
+            --nav-bg: rgba(13, 15, 20, 0.98);
+            --header-height: 72px;
+            
+            /* Material Shadows */
+            --shadow-elevation-1: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.24);
+            --shadow-elevation-2: 0 4px 6px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.2);
+            --shadow-elevation-3: 0 10px 20px rgba(0,0,0,0.4), 0 6px 6px rgba(0,0,0,0.25);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background-color: var(--nav-bg);
+            border-bottom: 2px solid var(--card-border);
+            box-shadow: var(--shadow-elevation-2);
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 170px;
+            height: 45px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .site-title {
+            font-size: 1.3rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .site-title span {
+            color: var(--accent-red);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .nav-menu a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--heading-color);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-bottom: 2px solid var(--accent-struckd);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+
+        /* MAIN CONTENT AREA */
+        main {
+            margin-top: calc(var(--header-height) + 40px);
+            flex: 1;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: left;
+            padding: 45px 40px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 6px solid var(--accent-struckd);
+            box-shadow: var(--shadow-elevation-2);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--accent-struckd);
+            border: 1px solid var(--accent-struckd);
+            padding: 4px 12px;
+            border-radius: 0px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--heading-color);
+            margin-bottom: 15px;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 900px;
+            font-weight: 400;
+        }
+
+        /* SECTIONS & CARDS */
+        section {
+            margin-bottom: 50px;
+            scroll-margin-top: calc(var(--header-height) + 20px);
+        }
+
+        .section-header {
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-struckd);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .unity-icon {
+            width: 26px;
+            height: 26px;
+            fill: var(--accent-struckd);
+            flex-shrink: 0;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 2px;
+            padding: 30px;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        /* EMOTIONAL CALLOUT BOX */
+        .emotional-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-top: 4px solid var(--accent-struckd);
+            padding: 30px;
+            border-radius: 2px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-elevation-2);
+        }
+
+        .emotional-box h3 {
+            color: var(--accent-struckd);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .emotional-box p {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .emotional-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* QUOTE BOX */
+        .official-statement {
+            background-color: #0f1219;
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--accent-gold);
+            padding: 25px;
+            margin: 20px 0 0 0;
+            border-radius: 0px;
+        }
+
+        .quote-title {
+            color: var(--accent-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .quote-body {
+            color: #cbd5e1;
+            font-size: 0.98rem;
+            white-space: pre-line;
+            line-height: 1.75;
+        }
+
+        /* EXPOSE BOX */
+        .expose-box {
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--accent-red);
+            background-color: #12151e;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .expose-title {
+            color: var(--accent-red);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .fact-list {
+            list-style-type: none;
+        }
+
+        .fact-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            font-size: 0.98rem;
+        }
+
+        .fact-list li::before {
+            content: "▲";
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+            font-size: 0.7rem;
+            top: 4px;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--card-border);
+            margin-top: 20px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 15px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -26px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-struckd);
+            border: 2px solid var(--bg-color);
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            color: var(--accent-struckd);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin: 4px 0;
+        }
+
+        .lost-media-badge {
+            display: inline-block;
+            background-color: rgba(239, 68, 68, 0.15);
+            color: var(--accent-red);
+            border: 1px solid var(--accent-red);
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-left: 8px;
+            text-transform: uppercase;
+        }
+
+        /* RESTRUCKD PROJECT BOX */
+        .restruckd-box {
+            background-color: #121620;
+            border: 1px solid var(--card-border);
+            border-top: 4px solid var(--accent-struckd);
+            padding: 25px;
+        }
+
+        .restruckd-header {
+            color: var(--accent-struckd);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+        }
+
+        .tech-note {
+            background-color: #0b0d12;
+            border: 1px solid var(--card-border);
+            border-left: 3px solid var(--accent-struckd);
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 0.92rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* FOOTER & SOCIALS */
+        footer {
+            background-color: #08090d;
+            border-top: 2px solid var(--card-border);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 60px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 2px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-elevation-1);
+            transition: all 0.2s ease;
+        }
+
+        .social-btn:hover {
+            border-color: var(--accent-struckd);
+            color: var(--accent-struckd);
+            background-color: rgba(255, 255, 255, 0.02);
+            box-shadow: var(--shadow-elevation-2);
+        }
+
+        .disclaimer-text {
+            font-size: 0.78rem;
+            color: #64748b;
+            max-width: 850px;
+            margin: 20px auto 0 auto;
+            line-height: 1.6;
+        }
+
+        /* COOKIE BANNER */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--card-bg);
+            border-top: 3px solid var(--accent-struckd);
+            padding: 20px;
+            z-index: 9999;
+            box-shadow: var(--shadow-elevation-3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 280px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .cookie-text a {
+            color: var(--accent-struckd);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-struckd);
+        }
+
+        .cookie-btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 2px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-accept {
+            background-color: var(--accent-struckd);
+            color: #000000;
+            box-shadow: var(--shadow-elevation-1);
+        }
+
+        .btn-decline {
+            background-color: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--card-border);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: var(--header-height);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--header-height));
+                background-color: var(--nav-bg);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 40px;
+                transition: left 0.3s ease;
+                border-top: 1px solid var(--card-border);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hero {
+                padding: 25px 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo-img {
+                width: 130px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="brand-container">
+                <img src="https://i.ibb.co/LzGb3M8w/2880-20260801011806.png" alt="Struckd Logo" class="logo-img">
+                <div class="site-title">Struckd <span>Dead</span></div>
+            </div>
+
+            <!-- MENU SECTIONS -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#statement">Statement</a></li>
+                <li><a href="#expose">Unity's Negligence</a></li>
+                <li><a href="#history">History & Lost Media</a></li>
+                <li><a href="#restruckd">ReStruckd Project</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- HERO BANNER -->
+        <div class="hero">
+            <span class="hero-badge">Official memorial and independent investigation</span>
+            <h1>The liquidation of Struckd: How the corporation Unity destroyed a childhood dream</h1>
+            <p class="subtitle">A timeline of systemic neglect, corporate resource extraction, and the tragic shutdown of a global community of young developers.</p>
+        </div>
+
+        <!-- EMOTIONAL IMPACT SECTION -->
+        <div class="emotional-box">
+            <h3>«Struckd wasn't just a platform. It was a place where childhood dreams of making your first game came true.»</h3>
+            <p>Imagine a child realizing for the first time that they can create their own worlds. Hundreds of thousands of children and teenagers around the world opened Struckd every day after school. They didn't know complex programming, but they had the most important thing — imagination. Struckd taught them to believe in themselves, find their first friends, share their creativity, and be proud of the virtual worlds they built.</p>
+            <p>Unity Technologies' cold corporate calculus erased all those years. Without pity or any chance of rescue, millions of hours of children's labor, their first sincere joy, and the pride of young authors turned into digital dust. This isn't just a shutdown — it's a betrayal of an entire generation's trust.</p>
+        </div>
+
+        <!-- SECTION 1: OFFICIAL STATEMENT -->
+        <section id="statement">
+            <div class="section-header">
+                <!-- Clean Modern Material Unity Logo -->
+                <svg class="unity-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.45 2.05L3.8 5.89l2.84 4.93 2.12-1.22V6.31l3.24-1.87 3.24 1.87v3.29l2.12 1.22 2.84-4.93-6.65-3.84a1.99 1.99 0 0 0-1.9 0zM2.05 13.55l3.84 6.65 4.93-2.84-1.22-2.12H6.31l-1.87-3.24 1.87-3.24h3.29l1.22-2.12-4.93-2.84-3.84 6.65a1.99 1.99 0 0 0 0 1.9zm19.9 0a1.99 1.99 0 0 0 0-1.9l-3.84-6.65-4.93 2.84 1.22 2.12h3.29l1.87 3.24-1.87 3.24h-3.29l-1.22 2.12 4.93 2.84 3.84-6.65zM12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                </svg>
+                <h2>1. Official Struckd Statement</h2>
+            </div>
+            <div class="content-card">
+                <p>Below is the official message from the Struckd administration to the community, published before the final server shutdown:</p>
+
+                <blockquote class="official-statement">
+                    <div class="quote-title">Official Struckd Statement</div>
+                    <div class="quote-body">«Over the years, Struckd has become something truly special.
+
+What started as a creative platform has grown into a global community of creators and players. Even today, many of you continue to create, share, and play every month — thousands of new games are created daily. This community creativity has always been at the heart of what we do and continued to inspire us every day.
+
+That is why making this decision has been incredibly difficult.
+
+With great regret, we announce that Struckd will officially close on August 1, 2026.
+
+As of August 1, 2026, the Struckd platform (including the app and website) will become unavailable. You will no longer be able to log in, play, create new games, or access previously published content.
+
+We are deeply grateful to each of you. Your passion and support made Struckd a place where millions of ideas came to life. Thank you for being part of this journey with us.
+
+Sincerely,
+The Struckd Team»</div>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CORPORATE NEGLIGENCE -->
+        <section id="expose">
+            <div class="section-header">
+                <svg class="unity-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+                <h2>2. Investigation: Unity Technologies' Negligence</h2>
+            </div>
+            <div class="content-card">
+                <p>The acquisition of the platform by Unity Technologies in 2021 promised a technological breakthrough, but in practice it led to the slow degradation and destruction of the project.</p>
+                
+                <div class="expose-box">
+                    <div class="expose-title">Key factors and timeline of corporate failure:</div>
+                    <ul class="fact-list">
+                        <li><strong>Resource and talent drain:</strong> After purchasing the Swiss studio, Unity redirected Struckd's lead developers to internal corporate projects, leaving the platform without its core engineering team.</li>
+                        <li><strong>Ignoring critical bugs:</strong> Throughout 2023–2025, the server infrastructure suffered constant outages, but technical support tickets were closed with automated responses.</li>
+                        <li><strong>Complete lack of monetization strategy:</strong> Unity failed to provide a viable development model for creators, while simultaneously blocking third-party integration opportunities.</li>
+                        <li><strong>Destruction of user archives:</strong> The community was given no tools to locally save their worlds, maps, or 3D models, turning millions of user projects into Lost Media.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: HISTORY & LOST MEDIA -->
+        <section id="history">
+            <div class="section-header">
+                <svg class="unity-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.25 2.52.77-1.28-3.52-2.09V8z"/>
+                </svg>
+                <h2>3. Historical timeline and lost heritage (Lost Media)</h2>
+            </div>
+            <div class="content-card">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016</div>
+                        <div class="timeline-title">Platform founding</div>
+                        <p>Flurin Jenal and Silvan Bauser launch Struckd in Switzerland as an intuitive 3D game builder for mobile devices.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">December 2017</div>
+                        <div class="timeline-title">Special projects and collaborations <span class="lost-media-badge">Lost Media</span></div>
+                        <p>Limited-time events and asset packs, such as <em>Struckd & YR Christmas</em> and branded <em>Struckd Audi</em> integrations, are now completely lost.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021</div>
+                        <div class="timeline-title">Deal with Unity Technologies</div>
+                        <p>Unity acquires Struckd. A period of explosive audience growth begins, later cut short by funding cuts.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">August 1, 2026</div>
+                        <div class="timeline-title">Final liquidation <span class="lost-media-badge">Lost Media</span></div>
+                        <p>Servers are shut down. The database containing millions of unique user-generated games is permanently deleted without any possibility of recovery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: RESTRUCKD PROJECT -->
+        <section id="restruckd">
+            <div class="section-header">
+                <svg class="unity-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/>
+                </svg>
+                <h2>4. Community initiative: The ReStruckd Project</h2>
+            </div>
+            <div class="content-card">
+                <div class="restruckd-box">
+                    <div class="restruckd-header">
+                     Reviving the legendary game builder
+                    </div>
+                    <p>The community of enthusiasts and independent developers has announced the start of work on **ReStruckd** — an open-source non-commercial alternative to the original platform.</p>
+                    
+                    <div class="tech-note">
+                        <strong>Project tech stack:</strong><br>
+                        The server side is being designed using distributed databases (Neon PostgreSQL) and modern cloud services (Railway). The architecture is being developed with a focus on preserving user assets, offline mode, and complete independence from large corporations.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Struckd Dead Memorial & Research Initiative — 2026</p>
+            
+            <div class="social-links">
+                <a href="https://t.me/struckd_team" class="social-btn">Telegram Community</a>
+                <a href="#" class="social-btn">GitHub Archive</a>
+                <a href="https://discord.gg/US6ZKCNpBb" class="social-btn">Discord Server</a>
+            </div>
+
+            <p class="disclaimer-text">
+                This site is an independent non-commercial information resource and memorial. All trademarks, logos, and names (Struckd, Unity, Unity Technologies) belong to their respective owners and are used solely for the purposes of citation, criticism, and archival documentation.
+            </p>
+        </div>
+    </footer>
+
+    <!-- COOKIE BANNER -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-text">
+            We use local storage to save interface settings. By continuing to use the site, you agree to our <a href="#">Privacy Policy</a>.
+        </div>
+        <div class="cookie-btns">
+            <button class="btn btn-accept" onclick="acceptCookies()">Accept</button>
+            <button class="btn btn-decline" onclick="closeBanner()">Close</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIVITY -->
+    <script>
+        // Mobile Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Cookie Banner Handling
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+
+        function closeBanner() {
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+
+        // Check Cookie Consent Status on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('cookieConsent') === 'true') {
+                document.getElementById('cookieBanner').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
